@@ -70,7 +70,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] mb-6"
           >
-            <span className="text-gray-900 dark:text-white">AI'nin</span>{' '}
+            <span className="text-gray-900 dark:text-white">AI&apos;nin</span>{' '}
             <span className="gradient-text">Etkisini</span>{' '}
             <span className="text-gray-900 dark:text-white">Keşfedin</span>
           </motion.h1>

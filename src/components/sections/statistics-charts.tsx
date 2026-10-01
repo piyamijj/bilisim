@@ -590,10 +590,10 @@ export function StatisticsCharts() {
         >
           <div className="mb-6">
             <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              AI'nın İş Gücüne Etkisi (2025-2030)
+              AI&apos;nın İş Gücüne Etkisi (2025-2030)
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              WEF tahminlerine göre AI'nın oluşturacağı, değiştireceği ve ortadan kaldıracağı işler (Milyon).
+              WEF tahminlerine göre AI&apos;nın oluşturacağı, değiştireceği ve ortadan kaldıracağı işler (Milyon).
             </p>
           </div>
           <div className="relative">

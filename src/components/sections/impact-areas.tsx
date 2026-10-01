@@ -230,11 +230,11 @@ export function ImpactAreas() {
             Etki Alanları
           </span>
           <h2 id="impact-title" className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
-            AI'nin <span className="gradient-text">Dönüştürdüğü</span> Sektörler
+            AI&apos;nin <span className="gradient-text">Dönüştürdüğü</span> Sektörler
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             Yapay zeka sadece bir teknoloji değil, her sektörde köklü değişimin katalizörüdür.
-            İşte AI'nin en büyük etki yarattığı 8 alan.
+            İşte AI&apos;nin en büyük etki yarattığı 8 alan.
           </p>
         </motion.div>
 
