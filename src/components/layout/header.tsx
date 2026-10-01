@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
@@ -91,31 +91,35 @@ export function Header() {
         </div>
       </nav>
 
-      <motion.div
-        id="mobile-menu"
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: 'auto' }}
-        exit={{ opacity: 0, height: 0 }}
-        className="md:hidden overflow-hidden bg-white/95 dark:bg-dark-950/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-dark-800/50"
-        role="navigation"
-        aria-label="Mobil menü"
-      >
-        <div className="container-custom py-6 space-y-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="pt-4 border-t border-gray-200 dark:border-dark-700">
-            <ThemeToggle />
-          </div>
-        </div>
-      </motion.div>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            id="mobile-menu"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden overflow-hidden bg-white/95 dark:bg-dark-950/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-dark-800/50"
+            role="navigation"
+            aria-label="Mobil menü"
+          >
+            <div className="container-custom py-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="pt-4 border-t border-gray-200 dark:border-dark-700">
+                <ThemeToggle />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }
